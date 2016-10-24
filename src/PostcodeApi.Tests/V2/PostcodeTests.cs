@@ -1,24 +1,24 @@
 ﻿using System.Configuration;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using PostcodeApi.Net.V2;
 using PostcodeApi.Net.V2.Model;
 using PostcodeApi.Net.V2.Wrappers;
 
 namespace PostcodeApi.Tests.V2
 {
-    [TestClass]
+    [TestFixture()]
     public class PostcodeTests
     {
         private PostcodeApiClient _client;
 
-        [TestInitialize]
+        [SetUp]
         public void Setup()
         {
             string apiKey = ConfigurationManager.AppSettings.Get("ApiKey");
             _client = new PostcodeApiClient(apiKey);
         }
 
-        [TestMethod]
+        [Test]
         public void GetSinglePostcode()
         {
             PostcodeView result = _client.GetPostcode("6545CA");
@@ -26,7 +26,7 @@ namespace PostcodeApi.Tests.V2
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void GetSpecificPostcode()
         {
             ApiHalResultWrapper result = _client.GetPostcodes("6545");
@@ -38,7 +38,7 @@ namespace PostcodeApi.Tests.V2
             Assert.AreEqual("Nijmegen", result.Embedded.Postcodes[0].City.Label);
         }
 
-        [TestMethod]
+        [Test]
         public void GetPostcodeRange()
         {
             ApiHalResultWrapper result = _client.GetPostcodes("6545");
@@ -51,7 +51,7 @@ namespace PostcodeApi.Tests.V2
             Assert.AreEqual("Nijmegen", result.Embedded.Postcodes[0].City.Label);
         }
 
-        [TestMethod]
+        [Test]
         public void GetLargePostcodeRange()
         {
             ApiHalResultWrapper result = _client.GetPostcodes("6545");

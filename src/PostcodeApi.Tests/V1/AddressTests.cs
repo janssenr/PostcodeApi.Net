@@ -1,24 +1,24 @@
 ﻿using System.Configuration;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using PostcodeApi.Net.V1;
 using PostcodeApi.Net.V1.Wrappers;
 
 namespace PostcodeApi.Tests.V1
 {
-    [TestClass]
-    [Ignore] // V1 has been officially deprecated as of 2016-03-01
+    [TestFixture]
+    [Ignore("V1 has been officially deprecated as of 2016-03-01")]
     public class AddressTests
     {
         private PostcodeApiClient _client;
 
-        [TestInitialize]
+        [SetUp]
         public void SetUp()
         {
             string apiKey = ConfigurationManager.AppSettings.Get("ApiKey");
             _client = new PostcodeApiClient(apiKey);
         }
 
-        [TestMethod]
+        [Test]
         public void GetSingleAddress()
         {
             ApiResultWrapper address = _client.GetAddress("6545CA", 29);
@@ -28,7 +28,7 @@ namespace PostcodeApi.Tests.V1
             Assert.IsNotNull(address.Resource.Bag);
         }
 
-        [TestMethod]
+        [Test]
         public void GetAddressByFullPostcode()
         {
             ApiResultWrapper result = _client.GetAddress("6545CA");
@@ -39,7 +39,7 @@ namespace PostcodeApi.Tests.V1
             Assert.IsNull(result.Resource.Bag);
         }
 
-        [TestMethod]
+        [Test]
         public void GetAddressByPostcodeNumbers()
         {
             ApiResultWrapper result = _client.GetAddress("6545");
