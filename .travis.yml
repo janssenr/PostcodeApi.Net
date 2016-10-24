@@ -3,4 +3,5 @@ solution: PostcodeApi.Net.sln
 script:
   - xbuild /p:Configuration=V451 PostcodeApi.Net.sln
 notifications:
-	email: "rob.janssen@upcmail.nl"
+  email:
+    - rob.janssen@upcmail.nl
