@@ -16,7 +16,7 @@ Installation
 
 PostcodeAPI.Net can easily be installed using the NuGet package
 
-	Install-Package PostcodeNlApi
+	Install-Package PostcodeApi
 
 Usage
 -----
