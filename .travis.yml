@@ -5,7 +5,7 @@ install:
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=V451 PostcodeApi.Net.sln
-  - mono ./testrunner/NUnit.Runners.3.5.0/tools/nunit-console.exe ./src/PostcodeApi.Tests/bin/V451/PostcodeApi.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.5.0/tools/nunit3-console.exe ./src/PostcodeApi.Tests/bin/V451/PostcodeApi.Tests.dll
 notifications:
   email:
     - rob.janssen@upcmail.nl
