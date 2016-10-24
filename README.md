@@ -1,12 +1,32 @@
 # PostcodeAPI.Net
-A .NET library for consuming the Dutch postcodeapi.nu post code database.
+PostcodeAPI.Net is a ASP.Net client library for the PostcodeAPI.nu web service.
 
-This .NET library wraps access to the Dutch Post Code API.
+**Links:**
 
-More information can be found on <http://www.postcodeapi.nu>. Access tokens can also be requested here.
-To contribute to the specification of this API, join the guys over at their repo: <https://github.com/apiwise/postcodeapi>.
+* [More information](https://www.postcodeapi.nu)
+* [API documentation](https://swaggerhub.com/api/apiwise/postcode-api)
 
-Any contributions are welcome in the form of pull-requests.
+Requirements
+------------
 
-## Installation
-The package can be installed via NuGet: <https://www.nuget.org/packages/PostcodeApi/>.
+PostcodeAPI.Net works with ASP.Net 4.5.1 or up.
+
+Installation
+------------
+
+PostcodeAPI.Net can easily be installed using the NuGet package
+
+	Install-Package PostcodeNlApi
+
+Usage
+-----
+
+Instantiate the client and replace the API key with your personal credentials:
+
+```
+var apiKey = "replace_with_your_own_api_key";
+var client = new PostcodeApiClient(apiKey);
+
+var result = client.GetAddresses("6545CA", 29);
+result = client.GetAddress("0268200000075156");
+```
