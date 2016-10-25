@@ -1,9 +1,9 @@
-# PostcodeAPI.Net
+# PostcodeApi.Net
 =================
 
 [![Build Status](https://travis-ci.org/janssenr/PostcodeApi.Net.svg?branch=master)](https://travis-ci.org/janssenr/PostcodeApi.Net)
 
-PostcodeAPI.Net is a ASP.Net client library for the PostcodeAPI.nu web service.
+PostcodeApi.Net is a ASP.Net client library for the PostcodeAPI.nu web service.
 
 **Links:**
 
@@ -13,12 +13,12 @@ PostcodeAPI.Net is a ASP.Net client library for the PostcodeAPI.nu web service.
 Requirements
 ------------
 
-PostcodeAPI.Net works with ASP.Net 4.5.1 or up.
+PostcodeApi.Net works with ASP.Net 4.5.1 or up.
 
 Installation
 ------------
 
-PostcodeAPI.Net can easily be installed using the NuGet package
+PostcodeApi.Net can easily be installed using the NuGet package
 
 	Install-Package PostcodeApi
 
