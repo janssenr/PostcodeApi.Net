@@ -1,4 +1,8 @@
 # PostcodeAPI.Net
+=================
+
+[![Build Status](https://travis-ci.org/janssenr/PostcodeApi.Net.svg?branch=master)](https://travis-ci.org/janssenr/PostcodeApi.Net)
+
 PostcodeAPI.Net is a ASP.Net client library for the PostcodeAPI.nu web service.
 
 **Links:**
