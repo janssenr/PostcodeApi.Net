@@ -9,7 +9,7 @@ namespace PostcodeApi.Net.V1
 {
     public class PostcodeApiClient : PostcodeApiClientBase
     {
-        [Obsolete("The recommended alternative is PostcodeApi.Net.V2.PostcodeApiClient", false)]
+        [Obsolete("The recommended alternative is PostcodeApi.Net.V3.PostcodeApiClient", false)]
         public PostcodeApiClient(string apiKey) : base(apiKey)
         {
             EndpointUrl = "http://api.postcodeapi.nu/";

@@ -10,9 +10,10 @@ namespace PostcodeApi.Net.V2
 {
     public sealed class PostcodeApiClient : PostcodeApiClientBase
     {
+        [Obsolete("The recommended alternative is PostcodeApi.Net.V3.PostcodeApiClient", false)]
         public PostcodeApiClient(string apiKey) : base(apiKey)
         {
-            EndpointUrl = "https://postcode-api.apiwise.nl/v2/";
+            EndpointUrl = "https://api.postcodeapi.nu/v2/";
             HeaderKey = "X-Api-Key";
         }
 

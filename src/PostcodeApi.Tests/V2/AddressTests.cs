@@ -14,7 +14,7 @@ namespace PostcodeApi.Tests.V2
         [SetUp]
         public void Setup()
         {
-            string apiKey = ConfigurationManager.AppSettings.Get("ApiKey");
+            string apiKey = ConfigurationManager.AppSettings.Get("V2ApiKey");
             _client = new PostcodeApiClient(apiKey);
         }
 

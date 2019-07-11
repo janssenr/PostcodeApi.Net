@@ -74,6 +74,10 @@
     <Compile Include="V2\Wrappers\HalEmbeddedResult.cs" />
     <Compile Include="V2\Wrappers\HalLink.cs" />
     <Compile Include="V2\Wrappers\HalNavigator.cs" />
+    <Compile Include="V3\Helpers\EnvironmentHelper.cs" />
+    <Compile Include="V3\Model\Address.cs" />
+    <Compile Include="V3\Model\Environment.cs" />
+    <Compile Include="V3\PostcodeApiClient.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
