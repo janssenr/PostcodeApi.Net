@@ -1,5 +1,9 @@
 language: csharp
-solution: ./src/PostcodeApi.Net.sln
+solution: src/PostcodeApi.Net.sln
+install:
+  - nuget restore PostcodeApi.Net.sln
+script:
+  - xbuild /p:Configuration=V451 PostcodeApi.Net.sln
 notifications:
   email:
     - rob.janssen@upcmail.nl
